@@ -2,8 +2,8 @@ import React, {useState, useEffect} from "react";
 import axios from "axios";
 import "./App.css";
 import Title from "./components/TitleContainer/Title.js";
-// import Background from "./components/background/background.js";
-// import Text from "./components/TextContainer/Text.js";
+import Background from "./components/background/background.js";
+import Text from "./components/TextContainer/Text.js";
 
 function App() {
   const [apod, apodSet] = useState({});
@@ -21,13 +21,9 @@ function App() {
   console.log(apod)
   return (
     <div className="App">
-      <Title title={apod.title}/>
-      {/* <Background />
-      <Text /> */}
-      <p>
-        Read through the instructions in the README.md file to build your NASA
-        app! Have fun!
-      </p> 
+      <Title title={apod.title} copyright={apod.copyright} date={apod.date}/>
+      <Background url={apod.url}/>
+      <Text explanation={apod.explanation}/>
         </div>
         
           );

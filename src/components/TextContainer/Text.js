@@ -1,7 +1,7 @@
 import React from "react";
 const TextContainer = props => {
     return(
-        <div className = "TextContainer" keys = {props.date}>
+        <div className = "TextContainer">
             <p>{props.explanation}</p>
         </div>
     )
