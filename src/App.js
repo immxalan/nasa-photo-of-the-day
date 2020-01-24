@@ -1,10 +1,10 @@
 import React, {useState, useEffect} from "react";
 import axios from "axios";
 import "./App.css";
-import Title from "./components/TitleContainer/Title.js";
+// import Title from "./components/TitleContainer/Title.js";
 import Background from "./components/background/background.js";
-import Text from "./components/TextContainer/Text.js";
-import styled from"styled-components";
+// import Text from "./components/TextContainer/Text.js";
+
 
 function App() {
   const [apod, apodSet] = useState({});
@@ -23,9 +23,14 @@ function App() {
   return (
  
     <div className="App">
-      <Title title={apod.title} copyright={apod.copyright} date={apod.date}/>
-      <Background hdurl={apod.hdurl}/>
-      <Text explanation={apod.explanation}/>
+      {/* <Title title={apod.title} copyright={apod.copyright} date={apod.date}/> */}
+      <Background 
+      hdurl={apod.hdurl}
+      title={apod.title}
+      copyright={apod.copyright}
+      date={apod.date}
+      explanation={apod.explanation}/>
+      {/* <Text explanation={apod.explanation}/> */}
         </div>
         
           );
